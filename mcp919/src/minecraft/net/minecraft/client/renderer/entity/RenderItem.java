@@ -965,6 +965,11 @@ public class RenderItem implements IResourceManagerReloadListener {
 		this.registerBlock(Blocks.brown_mushroom_block, BlockHugeMushroom.EnumType.ALL_INSIDE.getMetadata(), "brown_mushroom_block");
 		this.registerBlock(Blocks.red_mushroom_block, BlockHugeMushroom.EnumType.ALL_INSIDE.getMetadata(), "red_mushroom_block");
 		this.registerBlock(Blocks.dragon_egg, "dragon_egg");
+		this.registerItem(Items.flint_axe, "flint_axe");
+		this.registerItem(Items.flint_pickaxe, "flint_pickaxe");
+		this.registerItem(Items.flint_sword, "flint_sword");
+		this.registerItem(Items.flint_shovel, "flint_shovel");
+		this.registerItem(Items.flint_hoe, "flint_hoe");
 		if (Reflector.ModelLoader_onRegisterItems.exists()) Reflector.call(Reflector.ModelLoader_onRegisterItems, this.itemModelMesher);
 	}
 

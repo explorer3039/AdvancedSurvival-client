@@ -17,7 +17,7 @@ import net.minecraft.util.IStringSerializable;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-public class BlockDirt extends Block
+public class BlockDirt extends BlockFalling
 {
     public static final PropertyEnum<BlockDirt.DirtType> VARIANT = PropertyEnum.<BlockDirt.DirtType>create("variant", BlockDirt.DirtType.class);
     public static final PropertyBool SNOWY = PropertyBool.create("snowy");

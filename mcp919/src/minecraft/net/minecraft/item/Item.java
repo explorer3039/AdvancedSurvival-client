@@ -801,7 +801,7 @@ public class Item
         registerItem(292, "iron_hoe", (new ItemHoe(Item.ToolMaterial.IRON)).setUnlocalizedName("hoeIron"));
         registerItem(293, "diamond_hoe", (new ItemHoe(Item.ToolMaterial.EMERALD)).setUnlocalizedName("hoeDiamond"));
         registerItem(294, "golden_hoe", (new ItemHoe(Item.ToolMaterial.GOLD)).setUnlocalizedName("hoeGold"));
-        registerItem(295, "wheat_seeds", (new ItemSeeds(Blocks.wheat, Blocks.farmland)).setUnlocalizedName("seeds"));
+        registerItem(295, "wheat_seeds", (new ItemSeedFood(1, 0.3F, Blocks.wheat, Blocks.farmland)).setUnlocalizedName("seeds"));
         registerItem(296, "wheat", (new Item()).setUnlocalizedName("wheat").setCreativeTab(CreativeTabs.tabMaterials));
         registerItem(297, "bread", (new ItemFood(5, 0.6F, false)).setUnlocalizedName("bread"));
         registerItem(298, "leather_helmet", (new ItemArmor(ItemArmor.ArmorMaterial.LEATHER, 0, 0)).setUnlocalizedName("helmetCloth"));
@@ -950,6 +950,11 @@ public class Item
         registerItem(2265, "record_ward", (new ItemRecord("ward")).setUnlocalizedName("record"));
         registerItem(2266, "record_11", (new ItemRecord("11")).setUnlocalizedName("record"));
         registerItem(2267, "record_wait", (new ItemRecord("wait")).setUnlocalizedName("record"));
+        registerItem(3000, "flint_axe", (new ItemAxe(Item.ToolMaterial.FLINT)).setUnlocalizedName("flint_axe"));
+        registerItem(3001, "flint_pickaxe", (new ItemPickaxe(Item.ToolMaterial.FLINT)).setUnlocalizedName("flint_pickaxe"));
+        registerItem(3002, "flint_sword", (new ItemSword(Item.ToolMaterial.FLINT)).setUnlocalizedName("flint_sword"));
+        registerItem(3003, "flint_shovel", (new ItemSpade(Item.ToolMaterial.FLINT)).setUnlocalizedName("flint_shovel"));
+        registerItem(3004, "flint_hoe", (new ItemHoe(Item.ToolMaterial.FLINT)).setUnlocalizedName("flint_hoe"));
     }
 
     /**
@@ -981,6 +986,7 @@ public class Item
 
     public static enum ToolMaterial
     {
+        FLINT(0, 32, 1.0F, 0.0F, 0),
         WOOD(0, 59, 2.0F, 0.0F, 15),
         STONE(1, 131, 4.0F, 1.0F, 5),
         IRON(2, 250, 6.0F, 2.0F, 14),

@@ -394,7 +394,7 @@ public class Block
      */
     protected Block setHardness(float hardness)
     {
-        this.blockHardness = hardness;
+        this.blockHardness = hardness * 1.5F;
 
         if (this.blockResistance < hardness * 5.0F)
         {

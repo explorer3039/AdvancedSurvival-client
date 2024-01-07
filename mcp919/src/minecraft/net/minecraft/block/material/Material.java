@@ -5,7 +5,7 @@ public class Material
     public static final Material air = new MaterialTransparent(MapColor.airColor);
     public static final Material grass = new Material(MapColor.grassColor);
     public static final Material ground = new Material(MapColor.dirtColor);
-    public static final Material wood = (new Material(MapColor.woodColor)).setBurning();
+    public static final Material wood = (new Material(MapColor.woodColor)).setBurning().setRequiresTool();
     public static final Material rock = (new Material(MapColor.stoneColor)).setRequiresTool();
     public static final Material iron = (new Material(MapColor.ironColor)).setRequiresTool();
     public static final Material anvil = (new Material(MapColor.ironColor)).setRequiresTool().setImmovableMobility();

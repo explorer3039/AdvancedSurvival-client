@@ -201,6 +201,11 @@ public class Items
     public static final Item prismarine_shard;
     public static final Item prismarine_crystals;
     public static final Item banner;
+    public static final Item flint_axe;
+    public static final Item flint_pickaxe;
+    public static final Item flint_sword;
+    public static final Item flint_shovel;
+    public static final Item flint_hoe;
 
     private static Item getRegisteredItem(String name)
     {
@@ -402,6 +407,11 @@ public class Items
             prismarine_shard = getRegisteredItem("prismarine_shard");
             prismarine_crystals = getRegisteredItem("prismarine_crystals");
             banner = getRegisteredItem("banner");
+            flint_axe = getRegisteredItem("flint_axe");
+            flint_pickaxe = getRegisteredItem("flint_pickaxe");
+            flint_sword = getRegisteredItem("flint_sword");
+            flint_shovel = getRegisteredItem("flint_shovel");
+            flint_hoe = getRegisteredItem("flint_hoe");
         }
     }
 }

@@ -15,6 +15,11 @@ public class ItemAxe extends ItemTool
         super(3.0F, material, EFFECTIVE_ON);
     }
 
+    public boolean canHarvestBlock(Block blockIn)
+    {
+        return blockIn.getMaterial() == Material.wood ? true : false;
+    }
+
     public float getStrVsBlock(ItemStack stack, Block state)
     {
         return state.getMaterial() != Material.wood && state.getMaterial() != Material.plants && state.getMaterial() != Material.vine ? super.getStrVsBlock(stack, state) : this.efficiencyOnProperMaterial;

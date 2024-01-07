@@ -3,8 +3,8 @@ docs/
 reobf/
 eclipse/
 bin/
-!bin/minecraft/assets
+!bin/minecraft/assets/
 jars/
-!jars/libraries
-!jars/versions
+!jars/libraries/
+!jars/versions/
 temp/

@@ -45,7 +45,7 @@ public class BlockFalling extends Block
         }
     }
 
-    private void checkFallable(World worldIn, BlockPos pos)
+    public void checkFallable(World worldIn, BlockPos pos)
     {
         if (canFallInto(worldIn, pos.down()) && pos.getY() >= 0)
         {

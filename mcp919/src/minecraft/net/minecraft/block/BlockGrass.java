@@ -78,6 +78,7 @@ public class BlockGrass extends BlockFalling implements IGrowable
                     }
                 }
             }
+            this.checkFallable(worldIn, pos);
         }
     }
 

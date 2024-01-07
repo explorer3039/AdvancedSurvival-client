@@ -250,7 +250,7 @@ public class ChunkProviderSettings
         public int ironMinHeight = 0;
         public int ironMaxHeight = 64;
         public int goldSize = 9;
-        public int goldCount = 2;
+        public int goldCount = 3;
         public int goldMinHeight = 0;
         public int goldMaxHeight = 32;
         public int redstoneSize = 8;
@@ -258,10 +258,10 @@ public class ChunkProviderSettings
         public int redstoneMinHeight = 0;
         public int redstoneMaxHeight = 16;
         public int diamondSize = 8;
-        public int diamondCount = 1;
+        public int diamondCount = 2;
         public int diamondMinHeight = 0;
         public int diamondMaxHeight = 16;
-        public int rubySize = 6;
+        public int rubySize = 8;
         public int rubyCount = 1;
         public int rubyMinHeight = 0;
         public int rubyMaxHeight = 16;

@@ -40,7 +40,7 @@ public class BiomeGenHills extends BiomeGenBase
     public void decorate(World worldIn, Random rand, BlockPos pos)
     {
         super.decorate(worldIn, rand, pos);
-        int i = 3 + rand.nextInt(6);
+        int i = 30 + rand.nextInt(6);
 
         for (int j = 0; j < i; ++j)
         {

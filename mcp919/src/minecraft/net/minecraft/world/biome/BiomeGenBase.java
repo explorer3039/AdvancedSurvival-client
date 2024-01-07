@@ -420,6 +420,20 @@ public abstract class BiomeGenBase
     public void decorate(World worldIn, Random rand, BlockPos pos)
     {
         this.theBiomeDecorator.decorate(worldIn, rand, this, pos);
+        int i = 5 + rand.nextInt(6);
+
+        for (int j = 0; j < i; ++j)
+        {
+            int k = rand.nextInt(16);
+            int l = rand.nextInt(28) + 4;
+            int i1 = rand.nextInt(16);
+            BlockPos blockpos = pos.add(k, l, i1);
+
+            if (worldIn.getBlockState(blockpos).getBlock() == Blocks.stone)
+            {
+                worldIn.setBlockState(blockpos, Blocks.emerald_ore.getDefaultState(), 2);
+            }
+        }
     }
 
     public int getGrassColorAtPos(BlockPos pos)

@@ -1002,9 +1002,10 @@ public class Item
         STONE(1, 128, 4.0F, 1.0F, 5),
         IRON(2, 256, 6.0F, 2.0F, 14),
         DIAMOND(3, 1024, 8.0F, 3.0F, 10),
-        EMERALD(3, 1536, 12.0F, 4.0F, 16),
-        RUBY(4, 2048, 14.0F, 5.0F, 20),
-        GOLD(0, 32, 12.0F, 0.0F, 22);
+        RUBY(4, 1536, 12.0F, 4.0F, 16),
+        EMERALD(5, 2048, 14.0F, 5.0F, 20),
+        GOLD(2, 64, 18.0F, 1.0F, 22),
+        OBSIDIAN(4, 2048, 10.0F, 4.0F, 22);
 
         private final int harvestLevel;
         private final int maxUses;

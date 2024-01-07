@@ -1,0 +1,10 @@
+logs/
+docs/
+reobf/
+eclipse/
+bin/
+!bin/minecraft/assets
+jars/
+!jars/libraries
+!jars/versions
+temp/

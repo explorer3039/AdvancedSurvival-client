@@ -7,7 +7,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 
-public class BlockClay extends Block
+public class BlockClay extends BlockFalling
 {
     public BlockClay()
     {

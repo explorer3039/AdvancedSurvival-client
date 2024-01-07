@@ -234,6 +234,7 @@ public class Blocks
     public static final Block red_sandstone_stairs;
     public static final BlockSlab double_stone_slab2;
     public static final BlockSlab stone_slab2;
+    public static final Block ruby_ore;
 
     /**
      * Returns the Block in the blockRegistry with the specified name.
@@ -451,6 +452,7 @@ public class Blocks
             red_sandstone_stairs = getRegisteredBlock("red_sandstone_stairs");
             double_stone_slab2 = (BlockSlab)getRegisteredBlock("double_stone_slab2");
             stone_slab2 = (BlockSlab)getRegisteredBlock("stone_slab2");
+            ruby_ore = getRegisteredBlock("ruby_ore");
         }
     }
 }

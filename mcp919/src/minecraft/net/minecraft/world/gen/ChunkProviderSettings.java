@@ -89,6 +89,10 @@ public class ChunkProviderSettings
     public final int diamondCount;
     public final int diamondMinHeight;
     public final int diamondMaxHeight;
+    public final int rubySize;
+    public final int rubyCount;
+    public final int rubyMinHeight;
+    public final int rubyMaxHeight;
     public final int lapisSize;
     public final int lapisCount;
     public final int lapisCenterHeight;
@@ -170,6 +174,10 @@ public class ChunkProviderSettings
         this.diamondCount = settingsFactory.diamondCount;
         this.diamondMinHeight = settingsFactory.diamondMinHeight;
         this.diamondMaxHeight = settingsFactory.diamondMaxHeight;
+        this.rubySize = settingsFactory.rubySize;
+        this.rubyCount = settingsFactory.rubyCount;
+        this.rubyMinHeight = settingsFactory.rubyMinHeight;
+        this.rubyMaxHeight = settingsFactory.rubyMaxHeight;
         this.lapisSize = settingsFactory.lapisSize;
         this.lapisCount = settingsFactory.lapisCount;
         this.lapisCenterHeight = settingsFactory.lapisCenterHeight;
@@ -253,6 +261,10 @@ public class ChunkProviderSettings
         public int diamondCount = 1;
         public int diamondMinHeight = 0;
         public int diamondMaxHeight = 16;
+        public int rubySize = 6;
+        public int rubyCount = 1;
+        public int rubyMinHeight = 0;
+        public int rubyMaxHeight = 16;
         public int lapisSize = 7;
         public int lapisCount = 1;
         public int lapisCenterHeight = 16;

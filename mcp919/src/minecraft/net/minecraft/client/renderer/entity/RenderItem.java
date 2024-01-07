@@ -970,6 +970,18 @@ public class RenderItem implements IResourceManagerReloadListener {
 		this.registerItem(Items.flint_sword, "flint_sword");
 		this.registerItem(Items.flint_shovel, "flint_shovel");
 		this.registerItem(Items.flint_hoe, "flint_hoe");
+		this.registerBlock(Blocks.ruby_ore, "ruby_ore");
+		this.registerItem(Items.ruby, "ruby");
+		this.registerItem(Items.ruby_axe, "ruby_axe");
+		this.registerItem(Items.ruby_pickaxe, "ruby_pickaxe");
+		this.registerItem(Items.ruby_sword, "ruby_sword");
+		this.registerItem(Items.ruby_shovel, "ruby_shovel");
+		this.registerItem(Items.ruby_hoe, "ruby_hoe");
+		this.registerItem(Items.emerald_axe, "emerald_axe");
+		this.registerItem(Items.emerald_pickaxe, "emerald_pickaxe");
+		this.registerItem(Items.emerald_sword, "emerald_sword");
+		this.registerItem(Items.emerald_shovel, "emerald_shovel");
+		this.registerItem(Items.emerald_hoe, "emerald_hoe");
 		if (Reflector.ModelLoader_onRegisterItems.exists()) Reflector.call(Reflector.ModelLoader_onRegisterItems, this.itemModelMesher);
 	}
 

@@ -55,6 +55,7 @@ public class BiomeDecorator
     protected WorldGenerator goldGen;
     protected WorldGenerator redstoneGen;
     protected WorldGenerator diamondGen;
+    protected WorldGenerator rubyGen;
 
     /** Field that holds Lapis WorldGenMinable */
     protected WorldGenerator lapisGen;
@@ -170,6 +171,7 @@ public class BiomeDecorator
             this.goldGen = new WorldGenMinable(Blocks.gold_ore.getDefaultState(), this.chunkProviderSettings.goldSize);
             this.redstoneGen = new WorldGenMinable(Blocks.redstone_ore.getDefaultState(), this.chunkProviderSettings.redstoneSize);
             this.diamondGen = new WorldGenMinable(Blocks.diamond_ore.getDefaultState(), this.chunkProviderSettings.diamondSize);
+            this.rubyGen = new WorldGenMinable(Blocks.ruby_ore.getDefaultState(), this.chunkProviderSettings.rubySize);
             this.lapisGen = new WorldGenMinable(Blocks.lapis_ore.getDefaultState(), this.chunkProviderSettings.lapisSize);
             this.genDecorations(biome);
             this.currentWorld = null;
@@ -490,6 +492,7 @@ public class BiomeDecorator
         this.genStandardOre1(this.chunkProviderSettings.goldCount, this.goldGen, this.chunkProviderSettings.goldMinHeight, this.chunkProviderSettings.goldMaxHeight);
         this.genStandardOre1(this.chunkProviderSettings.redstoneCount, this.redstoneGen, this.chunkProviderSettings.redstoneMinHeight, this.chunkProviderSettings.redstoneMaxHeight);
         this.genStandardOre1(this.chunkProviderSettings.diamondCount, this.diamondGen, this.chunkProviderSettings.diamondMinHeight, this.chunkProviderSettings.diamondMaxHeight);
+        this.genStandardOre1(this.chunkProviderSettings.rubyCount, this.rubyGen, this.chunkProviderSettings.rubyMinHeight, this.chunkProviderSettings.rubyMaxHeight);
         this.genStandardOre2(this.chunkProviderSettings.lapisCount, this.lapisGen, this.chunkProviderSettings.lapisCenterHeight, this.chunkProviderSettings.lapisSpread);
     }
 }

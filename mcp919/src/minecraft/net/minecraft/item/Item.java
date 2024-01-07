@@ -782,10 +782,10 @@ public class Item
         registerItem(273, "stone_shovel", (new ItemSpade(Item.ToolMaterial.STONE)).setUnlocalizedName("shovelStone"));
         registerItem(274, "stone_pickaxe", (new ItemPickaxe(Item.ToolMaterial.STONE)).setUnlocalizedName("pickaxeStone"));
         registerItem(275, "stone_axe", (new ItemAxe(Item.ToolMaterial.STONE)).setUnlocalizedName("hatchetStone"));
-        registerItem(276, "diamond_sword", (new ItemSword(Item.ToolMaterial.EMERALD)).setUnlocalizedName("swordDiamond"));
-        registerItem(277, "diamond_shovel", (new ItemSpade(Item.ToolMaterial.EMERALD)).setUnlocalizedName("shovelDiamond"));
-        registerItem(278, "diamond_pickaxe", (new ItemPickaxe(Item.ToolMaterial.EMERALD)).setUnlocalizedName("pickaxeDiamond"));
-        registerItem(279, "diamond_axe", (new ItemAxe(Item.ToolMaterial.EMERALD)).setUnlocalizedName("hatchetDiamond"));
+        registerItem(276, "diamond_sword", (new ItemSword(Item.ToolMaterial.DIAMOND)).setUnlocalizedName("swordDiamond"));
+        registerItem(277, "diamond_shovel", (new ItemSpade(Item.ToolMaterial.DIAMOND)).setUnlocalizedName("shovelDiamond"));
+        registerItem(278, "diamond_pickaxe", (new ItemPickaxe(Item.ToolMaterial.DIAMOND)).setUnlocalizedName("pickaxeDiamond"));
+        registerItem(279, "diamond_axe", (new ItemAxe(Item.ToolMaterial.DIAMOND)).setUnlocalizedName("hatchetDiamond"));
         registerItem(280, "stick", (new Item()).setFull3D().setUnlocalizedName("stick").setCreativeTab(CreativeTabs.tabMaterials));
         registerItem(281, "bowl", (new Item()).setUnlocalizedName("bowl").setCreativeTab(CreativeTabs.tabMaterials));
         registerItem(282, "mushroom_stew", (new ItemSoup(6)).setUnlocalizedName("mushroomStew"));
@@ -799,7 +799,7 @@ public class Item
         registerItem(290, "wooden_hoe", (new ItemHoe(Item.ToolMaterial.FLINT)).setUnlocalizedName("hoeWood"));
         registerItem(291, "stone_hoe", (new ItemHoe(Item.ToolMaterial.STONE)).setUnlocalizedName("hoeStone"));
         registerItem(292, "iron_hoe", (new ItemHoe(Item.ToolMaterial.IRON)).setUnlocalizedName("hoeIron"));
-        registerItem(293, "diamond_hoe", (new ItemHoe(Item.ToolMaterial.EMERALD)).setUnlocalizedName("hoeDiamond"));
+        registerItem(293, "diamond_hoe", (new ItemHoe(Item.ToolMaterial.DIAMOND)).setUnlocalizedName("hoeDiamond"));
         registerItem(294, "golden_hoe", (new ItemHoe(Item.ToolMaterial.GOLD)).setUnlocalizedName("hoeGold"));
         registerItem(295, "wheat_seeds", (new ItemSeedFood(1, 0.3F, Blocks.wheat, Blocks.farmland)).setUnlocalizedName("seeds"));
         registerItem(296, "wheat", (new Item()).setUnlocalizedName("wheat").setCreativeTab(CreativeTabs.tabMaterials));
@@ -955,6 +955,18 @@ public class Item
         registerItem(3002, "flint_sword", (new ItemSword(Item.ToolMaterial.FLINT)).setUnlocalizedName("flint_sword"));
         registerItem(3003, "flint_shovel", (new ItemSpade(Item.ToolMaterial.FLINT)).setUnlocalizedName("flint_shovel"));
         registerItem(3004, "flint_hoe", (new ItemHoe(Item.ToolMaterial.FLINT)).setUnlocalizedName("flint_hoe"));
+        registerItem(3005, "ruby", (new Item()).setUnlocalizedName("ruby").setCreativeTab(CreativeTabs.tabMaterials));
+        registerItemBlock(Blocks.ruby_ore);
+        registerItem(3006, "ruby_axe", (new ItemAxe(Item.ToolMaterial.RUBY)).setUnlocalizedName("ruby_axe"));
+        registerItem(3007, "ruby_pickaxe", (new ItemPickaxe(Item.ToolMaterial.RUBY)).setUnlocalizedName("ruby_pickaxe"));
+        registerItem(3008, "ruby_sword", (new ItemSword(Item.ToolMaterial.RUBY)).setUnlocalizedName("ruby_sword"));
+        registerItem(3009, "ruby_shovel", (new ItemSpade(Item.ToolMaterial.RUBY)).setUnlocalizedName("ruby_shovel"));
+        registerItem(3010, "ruby_hoe", (new ItemHoe(Item.ToolMaterial.RUBY)).setUnlocalizedName("ruby_hoe"));
+        registerItem(3011, "emerald_axe", (new ItemAxe(Item.ToolMaterial.EMERALD)).setUnlocalizedName("emerald_axe"));
+        registerItem(3012, "emerald_pickaxe", (new ItemPickaxe(Item.ToolMaterial.EMERALD)).setUnlocalizedName("emerald_pickaxe"));
+        registerItem(3013, "emerald_sword", (new ItemSword(Item.ToolMaterial.EMERALD)).setUnlocalizedName("emerald_sword"));
+        registerItem(3014, "emerald_shovel", (new ItemSpade(Item.ToolMaterial.EMERALD)).setUnlocalizedName("emerald_shovel"));
+        registerItem(3015, "emerald_hoe", (new ItemHoe(Item.ToolMaterial.EMERALD)).setUnlocalizedName("emerald_hoe"));
     }
 
     /**
@@ -987,9 +999,11 @@ public class Item
     public static enum ToolMaterial
     {
         FLINT(0, 32, 2.0F, 0.0F, 15),
-        STONE(1, 131, 4.0F, 1.0F, 5),
-        IRON(2, 250, 6.0F, 2.0F, 14),
-        EMERALD(3, 1561, 8.0F, 3.0F, 10),
+        STONE(1, 128, 4.0F, 1.0F, 5),
+        IRON(2, 256, 6.0F, 2.0F, 14),
+        DIAMOND(3, 1024, 8.0F, 3.0F, 10),
+        EMERALD(3, 1536, 12.0F, 4.0F, 16),
+        RUBY(4, 2048, 14.0F, 5.0F, 20),
         GOLD(0, 32, 12.0F, 0.0F, 22);
 
         private final int harvestLevel;
@@ -1034,7 +1048,7 @@ public class Item
 
         public Item getRepairItem()
         {
-            return this == WOOD ? Item.getItemFromBlock(Blocks.planks) : (this == STONE ? Item.getItemFromBlock(Blocks.cobblestone) : (this == GOLD ? Items.gold_ingot : (this == IRON ? Items.iron_ingot : (this == EMERALD ? Items.diamond : null))));
+            return this == FLINT ? Items.flint : (this == STONE ? Item.getItemFromBlock(Blocks.cobblestone) : (this == GOLD ? Items.gold_ingot : (this == IRON ? Items.iron_ingot : (this == DIAMOND ? Items.diamond : (this == EMERALD ? Items.emerald : (this == RUBY ? Items.ruby : null))))));
         }
     }
 }

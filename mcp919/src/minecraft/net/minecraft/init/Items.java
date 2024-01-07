@@ -206,6 +206,17 @@ public class Items
     public static final Item flint_sword;
     public static final Item flint_shovel;
     public static final Item flint_hoe;
+    public static final Item ruby;
+    public static final Item ruby_axe;
+    public static final Item ruby_pickaxe;
+    public static final Item ruby_sword;
+    public static final Item ruby_shovel;
+    public static final Item ruby_hoe;
+    public static final Item emerald_axe;
+    public static final Item emerald_pickaxe;
+    public static final Item emerald_sword;
+    public static final Item emerald_shovel;
+    public static final Item emerald_hoe;
 
     private static Item getRegisteredItem(String name)
     {
@@ -412,6 +423,17 @@ public class Items
             flint_sword = getRegisteredItem("flint_sword");
             flint_shovel = getRegisteredItem("flint_shovel");
             flint_hoe = getRegisteredItem("flint_hoe");
+            ruby = getRegisteredItem("ruby");
+            ruby_axe = getRegisteredItem("ruby_axe");
+            ruby_pickaxe = getRegisteredItem("ruby_pickaxe");
+            ruby_sword = getRegisteredItem("ruby_sword");
+            ruby_shovel = getRegisteredItem("ruby_shovel");
+            ruby_hoe = getRegisteredItem("ruby_hoe");
+            emerald_axe = getRegisteredItem("emerald_axe");
+            emerald_pickaxe = getRegisteredItem("emerald_pickaxe");
+            emerald_sword = getRegisteredItem("emerald_sword");
+            emerald_shovel = getRegisteredItem("emerald_shovel");
+            emerald_hoe = getRegisteredItem("emerald_hoe");
         }
     }
 }

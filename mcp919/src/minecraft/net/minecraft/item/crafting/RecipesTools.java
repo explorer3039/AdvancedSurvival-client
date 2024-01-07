@@ -8,7 +8,7 @@ import net.minecraft.item.ItemStack;
 public class RecipesTools
 {
     private String[][] recipePatterns = new String[][] {{"XXX", " # ", " # "}, {"X", "#", "#"}, {"XX", "X#", " #"}, {"XX", " #", " #"}};
-    private Object[][] recipeItems = new Object[][] {{Blocks.cobblestone, Items.iron_ingot, Items.diamond, Items.gold_ingot, Items.flint}, {Items.stone_pickaxe, Items.iron_pickaxe, Items.diamond_pickaxe, Items.golden_pickaxe, Items.flint_pickaxe}, {Items.stone_shovel, Items.iron_shovel, Items.diamond_shovel, Items.golden_shovel, Items.flint_shovel}, {Items.stone_axe, Items.iron_axe, Items.diamond_axe, Items.golden_axe, Items.flint_axe}, {Items.stone_hoe, Items.iron_hoe, Items.diamond_hoe, Items.golden_hoe, Items.flint_hoe}};
+    private Object[][] recipeItems = new Object[][] {{Blocks.cobblestone, Items.iron_ingot, Items.diamond, Items.gold_ingot, Items.flint, Items.ruby, Items.emerald}, {Items.stone_pickaxe, Items.iron_pickaxe, Items.diamond_pickaxe, Items.golden_pickaxe, Items.flint_pickaxe, Items.ruby_pickaxe, Items.emerald_pickaxe}, {Items.stone_shovel, Items.iron_shovel, Items.diamond_shovel, Items.golden_shovel, Items.flint_shovel, Items.ruby_shovel, Items.emerald_shovel}, {Items.stone_axe, Items.iron_axe, Items.diamond_axe, Items.golden_axe, Items.flint_axe, Items.ruby_axe, Items.emerald_axe}, {Items.stone_hoe, Items.iron_hoe, Items.diamond_hoe, Items.golden_hoe, Items.flint_hoe, Items.ruby_hoe, Items.emerald_hoe}};
 
     /**
      * Adds the tool recipes to the CraftingManager.

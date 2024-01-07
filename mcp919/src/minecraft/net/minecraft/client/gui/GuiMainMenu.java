@@ -80,9 +80,6 @@ public class GuiMainMenu extends GuiScreen implements GuiYesNoCallback {
 	private int field_92020_v;
 	private int field_92019_w;
 	private ResourceLocation backgroundTexture;
-	/** Minecraft Realms button. */
-	private GuiButton modButton;
-	private GuiScreen modUpdateNotification;
 
 	public GuiMainMenu()
 	{
@@ -174,7 +171,6 @@ public class GuiMainMenu extends GuiScreen implements GuiYesNoCallback {
 	private void addSingleplayerMultiplayerButtons(final int p_73969_1_, final int p_73969_2_) {
 		this.buttonList.add(new GuiButton(1, this.width / 2 - 100, p_73969_1_, I18n.format("menu.singleplayer")));
 		this.buttonList.add(new GuiButton(2, this.width / 2 - 100, p_73969_1_ + p_73969_2_ * 1, I18n.format("menu.multiplayer")));
-		if (Reflector.GuiModList_Constructor.exists()) this.buttonList.add(this.modButton = new GuiButton(6, this.width / 2 - 100, p_73969_1_ + p_73969_2_ * 2, 98, 20, I18n.format("fml.menu.mods")));
 	}
 
 	/**
@@ -405,7 +401,7 @@ public class GuiMainMenu extends GuiScreen implements GuiYesNoCallback {
 		GlStateManager.pushMatrix();
 		GlStateManager.translate(this.width / 2 + 90, 70.0F, 0.0F);
 		GlStateManager.rotate(-20.0F, 0.0F, 0.0F, 1.0F);
-		float f = 1.8F - MathHelper.abs(MathHelper.sin(Minecraft.getSystemTime() % 1000L / 1000.0F * (float) Math.PI * 2.0F) * .3F /* normally this value is .1F but .3F is a lot cooler */);
+		float f = 1.8F - MathHelper.abs(MathHelper.sin(Minecraft.getSystemTime() % 1000L / 1000.0F * (float) Math.PI * 2.0F) * .1F);
 		f = f * 100.0F / (this.fontRendererObj.getStringWidth(this.splashText) + 32);
 		GlStateManager.scale(f, f, f);
 		this.drawCenteredString(this.fontRendererObj, this.splashText, 0, -8, -256);
@@ -418,16 +414,14 @@ public class GuiMainMenu extends GuiScreen implements GuiYesNoCallback {
 			for (int l1 = 0; l1 < list.size(); ++l1) { final String s1 = list.get(l1); if (!Strings.isNullOrEmpty(s1)) this.drawString(this.fontRendererObj, s1, 2, this.height - (10 + l1 * (this.fontRendererObj.FONT_HEIGHT + 1)), 16777215); }
 			if (Reflector.ForgeHooksClient_renderMainMenu.exists()) Reflector.call(Reflector.ForgeHooksClient_renderMainMenu, this, this.fontRendererObj, Integer.valueOf(this.width), Integer.valueOf(this.height));
 		} else this.drawString(this.fontRendererObj, s, 2, this.height - 10, -1);
-		// nobody reads this just remove it
-		/* String s2 = "Copyright Mojang AB. Do not distribute!"; this.drawString(this.fontRendererObj, s2,
-		 * this.width - this.fontRendererObj.getStringWidth(s2) - 2, this.height - 10, -1); */
+		String s2 = "Copyright Mojang AB. Do not distribute!"; 
+		this.drawString(this.fontRendererObj, s2, this.width - this.fontRendererObj.getStringWidth(s2) - 2, this.height - 10, -1); 
 		if (this.openGLWarning1 != null && this.openGLWarning1.length() > 0) {
 			drawRect(this.field_92022_t - 2, this.field_92021_u - 2, this.field_92020_v + 2, this.field_92019_w - 1, 1428160512);
 			this.drawString(this.fontRendererObj, this.openGLWarning1, this.field_92022_t, this.field_92021_u, -1);
 			this.drawString(this.fontRendererObj, this.openGLWarning2, (this.width - this.field_92024_r) / 2, this.buttonList.get(0).yPosition - 12, -1);
 		}
 		super.drawScreen(mouseX, mouseY, partialTicks);
-		if (this.modUpdateNotification != null) this.modUpdateNotification.drawScreen(mouseX, mouseY, partialTicks);
 	}
 
 	/**

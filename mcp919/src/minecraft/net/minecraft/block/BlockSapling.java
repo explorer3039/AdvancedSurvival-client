@@ -9,6 +9,7 @@ import net.minecraft.block.state.BlockState;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.BlockPos;
@@ -209,9 +210,21 @@ public class BlockSapling extends BlockBush implements IGrowable
      * Gets the metadata of the item this Block can drop. This method is called when the block gets destroyed. It
      * returns the metadata of the dropped item based on the old metadata of the block.
      */
-    public int damageDropped(IBlockState state)
+    //public int damageDropped(IBlockState state)
+    //{
+    //    return ((BlockPlanks.EnumType)state.getValue(TYPE)).getMetadata();
+    //}
+    public Item getItemDropped(IBlockState state, Random rand, int fortune)
     {
-        return ((BlockPlanks.EnumType)state.getValue(TYPE)).getMetadata();
+        return Items.stick;
+    }
+
+    /**
+     * Returns the quantity of items to drop on block destruction.
+     */
+    public int quantityDropped(Random random)
+    {
+        return Math.max(2, random.nextInt(6));
     }
 
     /**

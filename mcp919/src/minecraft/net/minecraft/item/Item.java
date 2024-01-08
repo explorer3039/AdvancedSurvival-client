@@ -1049,7 +1049,7 @@ public class Item
 
         public Item getRepairItem()
         {
-            return this == FLINT ? Items.flint : (this == STONE ? Item.getItemFromBlock(Blocks.cobblestone) : (this == GOLD ? Items.gold_ingot : (this == IRON ? Items.iron_ingot : (this == DIAMOND ? Items.diamond : (this == EMERALD ? Items.emerald : (this == RUBY ? Items.ruby : null))))));
+            return this == FLINT ? Items.flint : (this == STONE ? Item.getItemFromBlock(Blocks.cobblestone) : (this == IRON ? Items.iron_ingot : (this == DIAMOND ? Items.diamond : (this == EMERALD ? Items.emerald : (this == RUBY ? Items.ruby : null)))));
         }
     }
 }

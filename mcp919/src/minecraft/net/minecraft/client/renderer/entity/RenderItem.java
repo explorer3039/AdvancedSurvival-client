@@ -971,6 +971,7 @@ public class RenderItem implements IResourceManagerReloadListener {
 		this.registerItem(Items.flint_shovel, "flint_shovel");
 		this.registerItem(Items.flint_hoe, "flint_hoe");
 		this.registerBlock(Blocks.ruby_ore, "ruby_ore");
+		this.registerBlock(Blocks.ruby_block, "ruby_block");
 		this.registerItem(Items.ruby, "ruby");
 		this.registerItem(Items.ruby_axe, "ruby_axe");
 		this.registerItem(Items.ruby_pickaxe, "ruby_pickaxe");

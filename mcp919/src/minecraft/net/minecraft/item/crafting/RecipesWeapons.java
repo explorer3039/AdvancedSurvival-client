@@ -8,7 +8,7 @@ import net.minecraft.item.ItemStack;
 public class RecipesWeapons
 {
     private String[][] recipePatterns = new String[][] {{"X", "X", "#"}};
-    private Object[][] recipeItems = new Object[][] {{Blocks.cobblestone, Items.iron_ingot, Items.diamond, Items.gold_ingot, Items.flint, Items.ruby, Items.emerald}, {Items.stone_sword, Items.iron_sword, Items.diamond_sword, Items.golden_sword, Items.flint_sword, Items.ruby_sword, Items.emerald_sword}};
+    private Object[][] recipeItems = new Object[][] {{Blocks.cobblestone, Blocks.iron_block, Blocks.diamond_block, Items.flint, Blocks.ruby_block, Blocks.emerald_block}, {Items.stone_sword, Items.iron_sword, Items.diamond_sword, Items.flint_sword, Items.ruby_sword, Items.emerald_sword}};
 
     /**
      * Adds the weapon recipes to the CraftingManager.

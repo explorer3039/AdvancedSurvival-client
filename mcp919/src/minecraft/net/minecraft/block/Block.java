@@ -1460,6 +1460,7 @@ public class Block
         registerBlock(196, "acacia_door", (new BlockDoor(Material.wood)).setHardness(3.0F).setStepSound(soundTypeWood).setUnlocalizedName("doorAcacia").disableStats());
         registerBlock(197, "dark_oak_door", (new BlockDoor(Material.wood)).setHardness(3.0F).setStepSound(soundTypeWood).setUnlocalizedName("doorDarkOak").disableStats());
         registerBlock(198, "ruby_ore", (new BlockOre()).setHardness(3.0F).setResistance(5.0F).setStepSound(soundTypePiston).setUnlocalizedName("ruby_ore"));
+        registerBlock(199, "ruby_block", (new Block(Material.iron)).setHardness(5.0F).setResistance(10.0F).setStepSound(soundTypeMetal).setUnlocalizedName("ruby_block"));
         blockRegistry.validateKey();
 
         for (Block block13 : blockRegistry)

@@ -97,6 +97,7 @@ public class EntityZombie extends EntityMob
         this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.23000000417232513D);
         this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(3.0D);
         this.getAttributeMap().registerAttribute(reinforcementChance).setBaseValue(this.rand.nextDouble() * 0.10000000149011612D);
+        this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(200.0D);
     }
 
     protected void entityInit()
